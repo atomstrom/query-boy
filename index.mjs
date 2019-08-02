@@ -49,6 +49,23 @@ class Query {
   clear() {
     return this.query = [];
   }
+
+  /**
+   * remove params object by identifier
+   * @param identifier
+   * @returns {*[]}
+   */
+  removeParam(identifier = '') {
+    let matchIndex = null;
+    this.query.forEach((item, index) => {
+      if (item.identifier === identifier) {
+        return matchIndex = index;
+      }
+    });
+    if (matchIndex !== null) {
+      return this.query.splice(matchIndex, 1);
+    }
+  }
 }
 
 export default Query;
