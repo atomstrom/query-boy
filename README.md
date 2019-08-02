@@ -17,7 +17,6 @@ console.log(query.getQuery());
 
 ### @todo
 - check position and insert on specific value
-- check if identifier already exists -> don't add
 - getParam by identifier
 - remove param
 
