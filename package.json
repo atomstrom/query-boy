@@ -1,0 +1,25 @@
+{
+  "name": "query-builder",
+  "version": "0.0.1",
+  "description": "build and mdify queries from objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "testAll": "node  --experimental-modules test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomstrom/query-builder.git"
+  },
+  "keywords": [
+    "queries",
+    "query",
+    "params"
+  ],
+  "author": "Frank Holder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atomstrom/query-builder/issues"
+  },
+  "homepage": "https://github.com/atomstrom/query-builder#readme"
+}
