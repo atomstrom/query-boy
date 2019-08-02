@@ -28,13 +28,16 @@ class Query {
    * @param identifier
    * @param value
    */
-  addParam(identifier = '', value = '', position = '') {
+  addParam(identifier = '', value = '', position = null) {
     const paramObject = { identifier, value };
     if (paramObject.identifier && paramObject.value) {
-      // @todo: check position and insert on specific value
       const alreadyExists = this.query.find(item => item.identifier === paramObject.identifier);
       if (!alreadyExists) {
-        this.query.push(paramObject)
+        if (position !== null && position <= this.query.length) {
+          this.query.splice(position, 0, paramObject);
+        } else {
+          this.query.push(paramObject)
+        }
       } else {
         throw new Error('duplicate identifier detected');
       }
@@ -64,6 +67,21 @@ class Query {
     });
     if (matchIndex !== null) {
       return this.query.splice(matchIndex, 1);
+    }
+  }
+
+  /**
+   * get value by identifier
+   * @param identifier
+   * @returns {*}
+   */
+  getValue(identifier = '') {
+    if (!identifier) return;
+    const match = this.query.find(item => item.identifier === identifier);
+    if (match && match.value) {
+      return match.value;
+    } else {
+      throw new Error('identifier not found');
     }
   }
 }

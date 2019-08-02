@@ -17,12 +17,11 @@ query.getQuery();
 
 ### Methods
 - getQuery()
-- addParam(identifier:String, value:String, position:Number)
-- removeParam(identifier:String)
+- addParam(identifier, value, position) // position optional
+- removeParam(identifier)
+- getValue(identifier)
 - clear()
 
 ### @todo
-- check position and insert on specific value
-- getParam by identifier
 - export as npm module
 - tests
