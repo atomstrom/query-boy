@@ -9,13 +9,13 @@ class Query {
    * @returns {string}
    */
   getQuery() {
-    if (this.query.length === 0 || !this.query[0].identifier || !this.query[0].value ) return '';
+    if (this.query.length === 0 || !this.query[0].identifier || !this.query[0].value ) return this.prestring;
 
     const firstParam = this.query[0];
     let querystring = `?${firstParam.identifier}=${firstParam.value}`;
 
     this.query.forEach((item, index)=> {
-      if (index != 0) {
+      if (index !== 0) {
         querystring += `&${item.identifier}=${item.value}`;
       }
     });
@@ -50,7 +50,7 @@ class Query {
    * query reset
    */
   clear() {
-    return this.query = [];
+    this.query = [];
   }
 
   /**
