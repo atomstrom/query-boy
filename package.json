@@ -1,5 +1,5 @@
 {
-  "name": "query-builder",
+  "name": "query-boy",
   "version": "1.0.0",
   "description": "build dynamic queries",
   "main": "index.js",
