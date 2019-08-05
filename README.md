@@ -1,4 +1,5 @@
 # query-boy
+[![Build Status](https://travis-ci.com/atomstrom/query-boy.svg?token=xR6iXFbQzQedPMsfrvar&branch=develop)](https://travis-ci.com/atomstrom/query-boy)
 
 ### Usage example
 ```
