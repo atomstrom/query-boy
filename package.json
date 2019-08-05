@@ -4,7 +4,7 @@
   "description": "build dynamic queries",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "testAll": "node  --experimental-modules test.mjs"
   },
   "repository": {
@@ -21,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/atomstrom/query-builder/issues"
   },
-  "homepage": "https://github.com/atomstrom/query-builder#readme"
+  "homepage": "https://github.com/atomstrom/query-builder#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.8.0"
+  }
 }
