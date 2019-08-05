@@ -2,6 +2,7 @@
 
 ### Usage example
 ```
+import Query from 'query-boy';
 const test = new Query();
 const query = new Query('/include');
 
@@ -21,7 +22,3 @@ query.getQuery();
 - removeParam(identifier)
 - getValue(identifier)
 - clear()
-
-### @todo
-- export as npm module
-- tests
