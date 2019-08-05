@@ -1,4 +1,4 @@
-# query-builder
+# query-boy
 
 ### Usage example
 ```
