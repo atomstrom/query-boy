@@ -86,4 +86,4 @@ class Query {
   }
 }
 
-export default Query;
+module.exports = Query;
