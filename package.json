@@ -1,6 +1,6 @@
 {
   "name": "query-boy",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "build dynamic queries",
   "main": "index.js",
   "scripts": {
