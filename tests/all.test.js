@@ -13,6 +13,15 @@ describe('query class', () => {
     expect(querystring).toBe('/path');
   });
 
+  test('addParam() should not add query params if param val is empty', () => {
+    const query = new Query('/path');
+    query.addParam('name', '');
+    query.addParam('name', null);
+    query.addParam('name', undefined);
+    const querystring = query.getQuery();
+    expect(querystring).toBe('/path');
+  });
+
   test('addParam() should add query params', () => {
     const query1 = new Query('/path');
     query1.addParam('name', 'jane');

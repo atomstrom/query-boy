@@ -29,6 +29,9 @@ class Query {
    * @param value
    */
   addParam(identifier = '', value = '', position = null) {
+    if (value === undefined || value === null || value === '') {
+      return;
+    }
     const paramObject = { identifier, value };
     if (paramObject.identifier && paramObject.value) {
       const alreadyExists = this.query.find(item => item.identifier === paramObject.identifier);
